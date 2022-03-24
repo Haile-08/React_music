@@ -1,0 +1,13 @@
+.player-c {
+  padding: 50px 400px;
+  border-radius: 10px;
+  color: #282c34;
+}
+.player-c > h4 {
+  font-size: 50px;
+  font-family: sans-serif, monospace;
+}
+.player-c > p {
+  font-size: 14px;
+  font-family: sans-serif, monospace;
+}

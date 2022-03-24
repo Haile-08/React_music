@@ -1,0 +1,16 @@
+.player-Details-c .details-image img {
+  margin: 0px auto;
+  width: 100%;
+  max-width: 200px;
+}
+.player-Details-c .details-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-family: monospace, sans-serif;
+  color: #282c34;
+}
+.player-Details-c .details-artist {
+  font-size: 20px;
+  font-family: monospace, sans-serif;
+  color: #282c34;
+}
