@@ -1,5 +1,6 @@
 import "./css/App.css";
 import { useState } from "react";
+import Player from "./components/player";
 
 function App() {
   const [songs, setSongs] = useState([
@@ -34,9 +35,16 @@ function App() {
       src: "./asset/audio/The Weeknd - Blinding Lights.mp3",
     },
   ]);
+  const [currentsongindex, setcurrentsongindex] = useState(0);
+  const [nextsongindex, setnextsongindex] = useState(currentsongindex + 1);
   return (
     <div className="App">
-      <header className="App-header">cons</header>
+      <header className="App-header">
+        <Player
+          songs={songs[currentsongindex]}
+          nextsong={songs[nextsongindex]}
+        />
+      </header>
     </div>
   );
 }
