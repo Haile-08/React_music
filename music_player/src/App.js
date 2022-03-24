@@ -1,5 +1,5 @@
 import "./css/App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Player from "./components/player";
 
 function App() {
@@ -37,12 +37,23 @@ function App() {
   ]);
   const [currentsongindex, setcurrentsongindex] = useState(0);
   const [nextsongindex, setnextsongindex] = useState(currentsongindex + 1);
+  useEffect(() => {
+    setnextsongindex(() => {
+      if (currentsongindex + 1 > songs.length) {
+        return 0;
+      } else {
+        return currentsongindex + 1;
+      }
+    });
+  }, [currentsongindex]);
   return (
     <div className="App">
       <header className="App-header">
         <Player
-          songs={songs[currentsongindex]}
-          nextsong={songs[nextsongindex]}
+          currentsongindex={currentsongindex}
+          setcurrentsongindex={setcurrentsongindex}
+          nextsongindex={nextsongindex}
+          songs={songs}
         />
       </header>
     </div>
